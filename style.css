@@ -32,3 +32,28 @@
 #visual-settings .assist-option{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 #visual-settings .assist-option input{width:17px;height:17px;accent-color:#70caff}
 #visual-settings .assist-option small{flex-basis:100%;padding-left:26px}
+
+/* v5.3: scrollable settings, preserving gameplay styling and touch controls. */
+#visual-settings{max-height:100%;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;padding-right:4px;flex-shrink:1}
+#visual-settings button,#visual-settings select,#visual-settings input{touch-action:manipulation}
+.screen.settings-open{touch-action:pan-y;aspect-ratio:auto;height:min(650px,calc(100dvh - 120px));min-height:0}
+.screen.settings-open canvas{position:absolute;inset:0}
+.screen.settings-open .overlay{justify-content:flex-start;touch-action:pan-y}
+.screen.settings-open #visual-settings{min-height:0;flex:1}
+.screen.settings-open #visual-settings>h2{display:none}
+#gamepad-settings{border-top:1px solid #32536a;margin-top:8px;padding-top:8px;text-align:left}
+#gamepad-settings h3{font-size:16px;margin:4px 0 8px}
+#gamepad-settings p{font-size:11px;color:#b5d0e0;overflow-wrap:anywhere}
+#gamepad-settings label{margin:6px 0}
+#gamepad-settings input[type=range]{width:100%;display:block}
+.gp-row{display:grid;grid-template-columns:70px minmax(0,1fr) 48px;gap:5px;align-items:center;margin:5px 0;font-size:11px}
+.gp-row button,.gp-row select{padding:6px;overflow-wrap:anywhere;min-width:0}
+#gamepad-settings h4{font-size:13px;margin:10px 0 4px}
+#direction-controls{display:none;align-items:center;justify-content:center;gap:14px;margin:8px 0;padding:8px;border:1px solid #28465b;border-radius:10px}
+#touch-stick{position:relative;width:132px;height:132px;flex:0 0 132px;border-radius:50%;border:2px solid #52768c;background:radial-gradient(circle,#193c52 0 30%,#102a3c 31% 100%);touch-action:none;user-select:none}
+#touch-stick::before,#touch-stick::after{content:"";position:absolute;background:#63849780;pointer-events:none}#touch-stick::before{width:1px;height:100%;left:50%}#touch-stick::after{height:1px;width:100%;top:50%}
+#touch-stick-knob{position:absolute;width:46px;height:46px;border-radius:50%;left:calc(50% - 23px);top:calc(50% - 23px);background:#6fd2f4;border:2px solid #d7f7ff;box-shadow:0 0 12px #57c9ef88;pointer-events:none;transition:transform .05s linear}
+body.touch-direction-mode #direction-controls{display:flex}body.touch-direction-mode .controls [data-k="up"],body.touch-direction-mode .controls [data-k="down"]{display:none}
+@media(pointer:coarse){body.touch-direction-mode .controls{grid-template-columns:repeat(5,1fr)}}
+#gp-capture{color:#ffe28c!important}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #90e6ff;outline-offset:2px}
+#ai-debug-panel{margin:8px 0;padding:8px 10px;border:1px solid #31536c;border-radius:8px;background:#071827;color:#bfe8f6;font:11px/1.45 monospace;white-space:pre-wrap}
