@@ -1,0 +1,34 @@
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#eff7fb;background:#071522}*{box-sizing:border-box}body{margin:0}main{margin:0 auto;max-width:1100px;padding:14px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}small{font-size:.7em;color:#a2c4d7}button{border:1px solid #37556a;color:#eef9ff;background:#183247;padding:10px 14px;border-radius:9px;cursor:pointer;touch-action:none;user-select:none;font-weight:700}button:hover{filter:brightness(1.2)}.screen{position:relative;aspect-ratio:8/5;border-radius:12px;overflow:hidden;background:#0c2335;touch-action:none}.screen canvas{display:block;width:100%;height:100%;outline:0}.overlay{position:absolute;inset:0;background:#061626ef;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;text-align:center;padding:16px;overflow-y:auto}.overlay[hidden], [hidden]{display:none!important}h1{font-size:clamp(19px,3vw,29px);margin:0}p{margin:3px 0;line-height:1.55}#message{color:#b5d0e0;font-size:13px}#configuration{width:min(390px,100%);display:grid;gap:8px}label{display:block;text-align:left;background:#142e44;border:1px solid #32536a;border-radius:9px;padding:8px 12px;font-size:11px;color:#a9ccdd}select{width:100%;display:block;margin-top:5px;padding:8px;border-radius:7px;color:white;background:#294b65;border:1px solid #426a84}.disabled{opacity:.45}.primary{background:#2389b5;min-width:180px}.stats{display:flex;justify-content:space-between;gap:10px;margin:10px 0;font-size:13px}.stats span{flex:1;text-align:center;border:1px solid #28465b;border-radius:8px;padding:9px}.stats b{margin-left:5px}.controls{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.controls button{font-size:18px;min-height:58px}.controls button small{display:block;font-size:10px;font-weight:400;color:#c5dae8}.controls .gun{background:#823a44}.controls .missile{background:#6b5730}.controls button.held{outline:2px solid #90e6ff;filter:brightness(1.5)}.help{color:#9bbacf;font-size:12px;margin:13px 0}@media(max-width:600px){main{padding:7px}.controls{grid-template-columns:repeat(4,1fr);gap:5px}.controls button{padding:6px;font-size:16px}.stats{font-size:11px;gap:4px}.overlay{gap:6px;padding:6px}.overlay label{padding:5px 8px}.overlay select{padding:5px}}
+
+.keyconfig{border:1px solid #28465b;padding:9px;border-radius:9px;margin:10px 0}.keyconfig label{margin-top:6px}.bindrow{display:grid;grid-template-columns:80px 1fr 1fr;gap:7px;align-items:center;margin:5px 0;font-size:12px}.bindrow button{padding:6px}.overlay{gap:6px}.overlay label{padding:5px 9px}.overlay select{padding:6px}@media(max-height:620px){.overlay{justify-content:flex-start}}
+
+/* v5.2.3 社群分享版署名 */
+.site-footer{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;padding:20px 8px 12px;margin-top:12px;border-top:1px solid #28465b;color:#92b5ca;font-size:12px;text-align:center}
+.site-footer strong{font-weight:650;color:#d1e8f7}
+.site-footer a{color:#76cfff;text-decoration:none;border:1px solid #31536c;border-radius:999px;padding:6px 12px;transition:background .15s}
+.site-footer a:hover,.site-footer a:focus-visible{background:#173a55;text-decoration:underline}
+
+/* v5.2.4 Pointer Lock */
+.header-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}#mouse-status{font-size:11px;color:#91afc6}#mouse-status.active{color:#8af4bb}#lockmouse{border-color:#31728e;background:#123b53;color:#c9f2ff}#lockmouse:disabled{opacity:.55;cursor:default}@media(max-width:580px){#mouse-status{display:none}.header-actions{gap:5px}#lockmouse{padding:6px 8px}}
+
+/* v5.2.7: additional mouse-fire binding is visible in remap settings */
+.bindrow{grid-template-columns:74px repeat(3,minmax(0,1fr));}
+.bindrow button{min-width:0;overflow-wrap:anywhere}
+
+/* v5.2.7: prevent Chrome Android long-press menus on game controls */
+.controls, .controls button, .screen, canvas, [data-k] {
+  -webkit-touch-callout:none !important;
+  -webkit-user-select:none !important;
+  user-select:none !important;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:none;
+}
+.controls button, [data-k] { -webkit-user-drag:none; }
+
+/* v5.2.11 menu settings */
+#visual-settings{width:min(390px,100%);display:grid;gap:8px}
+#visual-settings h2{font-size:20px;margin:2px 0 4px}
+#open-settings{min-width:180px}
+#visual-settings .assist-option{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+#visual-settings .assist-option input{width:17px;height:17px;accent-color:#70caff}
+#visual-settings .assist-option small{flex-basis:100%;padding-left:26px}
